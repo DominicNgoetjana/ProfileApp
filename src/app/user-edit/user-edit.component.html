@@ -1,0 +1,34 @@
+<div>
+  <form (submit)="onSubmit()">
+    <div class="form-group">
+      <label for="id">Id:</label>
+      <input type="text" id="userid" [(ngModel)]="user.id" name="first" class="form-control" disabled />
+    </div>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" [(ngModel)]="user.name" name="second" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="surname">Surname:</label>
+      <input type="text" id="surname" [(ngModel)]="user.surname" name="third" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="idnumber">ID Number:</label>
+      <input type="text" id="idnumber" [(ngModel)]="user.idNumber" name="fourth" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="passportnumber">Passport Number:</label>
+      <input type="text" id="pasportnumber" [(ngModel)]="user.passportNumber" name="fifth" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="mobilenumber">Mobile Number:</label>
+      <input type="text" id="mobilenumber" [(ngModel)]="user.mobileNumber" name="sixth" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="emailaddress">Email Address:</label>
+      <input type="text" id="emailaddress" [(ngModel)]="user.emailAddress" name="seventh" class="form-control" />
+    </div>
+
+    <button type="submit">Save</button> | <button type="button" [routerLink]="['/user-list']">Cancel</button>
+  </form>
+</div>

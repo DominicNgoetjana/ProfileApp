@@ -1,0 +1,30 @@
+<div class="container py-5">
+  <h3 class="text-center text-uppercase">List of Users</h3>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr class="text-center text-uppercase">
+        <th>User ID</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>ID Number</th>
+        <th>Passport Number</th>
+        <th>Mobile Number</th>
+        <th>Email Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.surname}}</td>
+        <td>{{user.idNumber}}</td>
+        <td>{{user.passportNumber}}</td>
+        <td>{{user.mobileNumber}}</td>
+        <td>{{user.emailAddress}}</td>
+        <td>
+          <a href="#" [routerLink]="['/user-edit', user.id]">Edit</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
